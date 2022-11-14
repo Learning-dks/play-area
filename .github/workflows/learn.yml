@@ -1,0 +1,17 @@
+name: Trigger Docu Build
+
+# Controls when the WF will run
+on:
+  workflow_dispatch:
+  workflow_call: 
+
+# WF jobs
+jobs: 
+  docuBuild:
+   runs-on: [Docu]
+   steps:
+       - name: step1_checkout_cxWorkflows
+         uses: actions/checkout@v3
+         
+       - name: Use a repo or org secret from the calling workflow.
+         run: echo ${{ secrets.SECRET_TOKEN }}
