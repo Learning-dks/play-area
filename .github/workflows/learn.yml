@@ -8,7 +8,7 @@ on:
 # WF jobs
 jobs: 
   docuBuild:
-   runs-on: [Docu]
+   runs-on: []
    steps:
        - name: step1_checkout_cxWorkflows
          uses: actions/checkout@v3
